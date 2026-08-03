@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Time Complexity = O(n + m)
+
 list<int> fun(vector<int> v1,vector<int> v2){
     list<int> ans;
     if(v1.size() == 0 || v2.size() == 0){
