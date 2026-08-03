@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Time Complexity: O(log n)
 int main()
 {
     long long a, n, m;
@@ -34,5 +35,3 @@ int main()
 
     return 0;
 }
-
-//Time Complexity: O(log n)
