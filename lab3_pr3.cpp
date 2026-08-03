@@ -1,49 +1,38 @@
 #include <iostream>
 using namespace std;
 
-long long power(long long a, long long n) {
-    long long result = 1;
-
-    while (n > 0) {
-        if (n % 2 == 1)      // If exponent is odd
-            result = result * a;
-
-        a = a * a;           // Square the base
-        n = n / 2;           // Divide exponent by 2
-    }
-
-    return result;
-}
-
-long long modPower(long long a, long long n, long long m) {
-    long long result = 1;
-    a = a % m;
-
-    while (n > 0) {
-        if (n % 2 == 1)
-            result = (result * a) % m;
-
-        a = (a * a) % m;
-        n = n / 2;
-    }
-
-    return result;
-}
-
-int main() {
+int main()
+{
     long long a, n, m;
+    long long ans = 1;
 
-    cout << "Enter base and exponent: ";
-    cin >> a >> n;
+    cout << "Enter base: ";
+    cin >> a;
 
-    cout << "a^n = " << power(a, n) << endl;
+    cout << "Enter exponent: ";
+    cin >> n;
 
-    cout << "Do you want modulus? (Enter 0 for No): ";
+    long long base = a;
+    long long exp = n;
+
+    while (exp > 0)
+    {
+        if (exp % 2 == 1)
+            ans = ans * base;
+
+        base = base * base;
+        exp = exp / 2;
+    }
+
+    cout << "a^n = " << ans << endl;
+
+    cout << "Enter modulus (0 if not required): ";
     cin >> m;
 
-    if (m != 0) {
-        cout << "a^n mod m = " << modPower(a, n, m) << endl;
-    }
+    if (m != 0)
+        cout << "a^n mod m = " << ans % m << endl;
 
     return 0;
 }
+
+//Time Complexity: O(log n)
