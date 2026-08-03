@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//O(n*k)
+
 vector<int> fun(vector<int> v,int k,int n){
     vector<int> ans(n,0);
     if(k == 0){
