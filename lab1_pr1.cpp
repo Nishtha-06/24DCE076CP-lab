@@ -6,6 +6,14 @@ using namespace std;
 
 //Time Complexity = O(n + m)
 
+//Two departments each maintain a sorted linked list of employee ID records. For an upcoming audit, the two
+// registries must be combined into a single sorted linked list by splicing together the existing nodes, preserving the
+// sorted order throughout.
+// Input: Heads of two sorted linked lists, list1 and list2.
+// Output: Head of the merged sorted linked list.
+// Example 1: Input: list1 = [1,2,4], list2 = [1,3,4]
+// Output: [1,1,2,3,4,4]
+
 list<int> fun(vector<int> v1,vector<int> v2){
     list<int> ans;
     if(v1.size() == 0 || v2.size() == 0){
