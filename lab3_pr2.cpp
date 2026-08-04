@@ -33,3 +33,5 @@ int main(){
 
 
 }
+
+//O(log(min(a,b))
