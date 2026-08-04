@@ -2,6 +2,8 @@
 using namespace std;
 
 //O(log n)
+
+// Number of trailing 0
 int main(){
     int n,count=0;
     cin>>n;
