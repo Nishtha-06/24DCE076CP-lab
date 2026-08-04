@@ -2,6 +2,8 @@
 using namespace std;
 
 //Time Complexity: O(log n)
+//Example 1: Input: a = 2, n = 10
+// Output: 1024
 int main()
 {
     long long a, n, m;
